@@ -1,0 +1,10 @@
+rhythpri_ko_ja:
+  database_name: rhythpri_ko_ja
+  target_accounts: ['anidong3282', 'PRIPARA_TV', 'kinpri_KR']
+  source_lang: ko
+  target_lang: ja
+rhythpri_ja_ko:
+  database_name: rhythpri_ja_ko
+  target_accounts: ['T_ARTS_PRETTY', 'PRR_music', 'kinpri_PR', 'pripara_PR', 'prismstone_hj']
+  source_lang: ja
+  target_lang: ko
