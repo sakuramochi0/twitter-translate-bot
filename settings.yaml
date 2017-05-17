@@ -5,6 +5,6 @@ rhythpri_ko_ja:
   target_lang: ja
 rhythpri_ja_ko:
   database_name: rhythpri_ja_ko
-  target_accounts: ['T_ARTS_PRETTY', 'PRR_music', 'kinpri_PR', 'pripara_PR', 'prismstone_hj']
+  target_accounts: ['T_ARTS_PRETTY', 'PRR_music', 'kinpri_PR', 'pripara_PR', 'prismstone_hj', 'goods_yamada']
   source_lang: ja
   target_lang: ko
