@@ -248,7 +248,7 @@ def tweet_doc(doc):
         else:
             max_body_len = max_tweet_len - t_co_len - 12
             status = text[:max_body_len] + ' ' + tweet_url
-            print(len(status))
+            print(len(status), status)
             reply_id = tweet(id, status, last=False)
             text = text[max_body_len:]
             # Then tweet remaining parts
@@ -327,7 +327,7 @@ if __name__ == '__main__':
     target_accounts = settings['target_accounts']
 
     # constants
-    max_tweet_len = 140
+    max_tweet_len = 100
     t_co_len = 24
     my_reply_screen_name = '@{sn} '.format(sn=args.account)
 
