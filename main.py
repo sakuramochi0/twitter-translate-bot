@@ -38,18 +38,10 @@ def make_doc(t):
                 'translated': False,
                 'post_processed': False,
             },
-            'naver': {
-                'translated': False,
-                'post_processed': False,
-            },
         },
         'time': t.created_at,
         'translated_text': {
             'google': {
-                'raw': '',
-                'post_processed': '',
-            },
-            'naver': {
                 'raw': '',
                 'post_processed': '',
             },
@@ -58,10 +50,10 @@ def make_doc(t):
     }
     return doc
 
-def translate_untranslated_docs(google=None, naver=None):
+def translate_untranslated_docs(google=None):
     """Translate untranslated text in database."""
-    for doc in c.find({'$or': [{'meta.google.translated': False}, {'meta.naver.translated': False}], 'meta.tweeted': False}):
-        translated_texts = translate(doc['t'], google=google, naver=naver)
+    for doc in c.find({'meta.google.translated': False, 'meta.tweeted': False}):
+        translated_texts = translate(doc['t'], google=google)
         if 'google' in translated_texts:
             google_translated = True
             google_text = translated_texts['google']
